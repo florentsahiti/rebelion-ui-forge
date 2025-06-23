@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -76,10 +77,10 @@ const Shop = () => {
   ];
 
   return (
-    <section id="shop" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="shop" className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-2">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Shop Rebellion
           </h2>
@@ -90,7 +91,7 @@ const Shop = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8">
           <div className="flex space-x-8 border-b border-gray-200">
             <button className="pb-4 px-2 text-black border-b-2 border-black font-medium">
               All Products
@@ -105,10 +106,10 @@ const Shop = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {products.map((product) => (
-            <Card key={product.id} className="group cursor-pointer border-0 shadow-none hover:shadow-lg transition-all duration-300">
-              <div className="relative overflow-hidden bg-gray-50 rounded-lg mb-4">
+            <Card key={product.id} className="group cursor-pointer border-0 shadow-none hover:shadow-lg transition-all duration-300 p-3">
+              <div className="relative overflow-hidden bg-gray-50 rounded-lg mb-3">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -117,14 +118,14 @@ const Shop = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
                 
                 {/* Quick Add Button */}
-                <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute bottom-3 left-3 right-3 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <Button className="w-full bg-black text-white hover:bg-gray-800">
                     Quick Add
                   </Button>
                 </div>
               </div>
               
-              <div className="space-y-2">
+              <div className="space-y-1 px-1">
                 <h3 className="font-medium text-black text-sm leading-tight">
                   {product.name}
                 </h3>
