@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -78,9 +77,9 @@ const Shop = () => {
 
   return (
     <section id="shop" className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-2">
+      <div className="w-full">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Shop Rebellion
           </h2>
@@ -91,7 +90,7 @@ const Shop = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 px-4">
           <div className="flex space-x-8 border-b border-gray-200">
             <button className="pb-4 px-2 text-black border-b-2 border-black font-medium">
               All Products
@@ -106,7 +105,7 @@ const Shop = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mb-8">
           {products.map((product) => (
             <Card key={product.id} className="group cursor-pointer border-0 shadow-none hover:shadow-lg transition-all duration-300 p-3">
               <div className="relative overflow-hidden bg-gray-50 rounded-lg mb-3">
@@ -141,7 +140,7 @@ const Shop = () => {
         </div>
 
         {/* Load More */}
-        <div className="text-center">
+        <div className="text-center px-4">
           <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-8 py-3">
             Load More Products
           </Button>
